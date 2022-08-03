@@ -659,7 +659,7 @@ plot_pairs <- function(data, columns, color = NULL, color_upper = NULL,
       if (is.null(color_scheme_upper)) {
         legend_plt2 <- legend_plt2 +
           vthemes::scale_color_vmodern(discrete = !is.numeric(color_upper),
-                                       viridis = TRUE, option = "D",
+                                       palette = "viridis", viridis_option = "D",
                                        drop = drop)
       } else {
         legend_plt2 <- legend_plt2 +
@@ -745,7 +745,7 @@ plot_pairs <- function(data, columns, color = NULL, color_upper = NULL,
                   plt[i, j] <- plt[i, j] +
                     vthemes::scale_fill_vmodern(
                       discrete = !is.numeric(color_upper),
-                      viridis = TRUE, option = "D", drop = drop
+                      palette = "viridis", viridis_option = "D", drop = drop
                     )
                 } else {
                   plt[i, j] <- plt[i, j] +
@@ -780,7 +780,7 @@ plot_pairs <- function(data, columns, color = NULL, color_upper = NULL,
                   plt[i, j] <- plt[i, j] +
                     vthemes::scale_color_vmodern(
                       discrete = !is.numeric(color_upper),
-                      viridis = TRUE, option = "D", drop = drop
+                      palette = "viridis", viridis_option = "D", drop = drop
                     )
                 } else {
                   plt[i, j] <- plt[i, j] +

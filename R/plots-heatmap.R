@@ -220,9 +220,9 @@ plot_heatmap <- function(X, y_groups = NULL, x_groups = NULL,
     if (is.null(color_scheme) | identical(color_scheme, "viridis")) {
       plt <- plt +
         vthemes::scale_fill_vmodern(discrete = !is.numeric(X_long$fill),
-                                    viridis = TRUE, option = viridis_option) +
+                                    palette = "viridis", viridis_option = viridis_option) +
         vthemes::scale_color_vmodern(discrete = !is.numeric(X_long$fill),
-                                     viridis = TRUE, option = viridis_option)
+                                     palette = "viridis", viridis_option = viridis_option)
     } else if (identical(color_scheme, "temperature")) {
       plt <- plt +
         ggplot2::scale_fill_gradient2(
