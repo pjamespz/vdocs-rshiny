@@ -72,6 +72,7 @@ plot_hclust_heatmap(
 plot_cor_heatmap(
   X,
   cor_type = "pearson",
+  absolute_value = FALSE,
   xytext_labels = colnames(X),
   xytext_colors = NULL,
   show_ytext = TRUE,
@@ -177,6 +178,8 @@ provide either \code{dist_metric} or \code{dist_mat} if \code{clust_y = T}.}
 
 \item{cor_type}{Type of correlation. Must be one of "pearson", "kendall",
 or "spearman"}
+
+\item{absolute_value}{Logical indicating whether or not to show absolute value of the correlation values in the correlation heatmap.}
 
 \item{xytext_labels}{x- and y-axis labels for correlation heatmap.}
 
