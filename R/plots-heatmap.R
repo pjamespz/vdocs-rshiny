@@ -12,6 +12,7 @@
 #' @param X Data matrix or data frame to use for heatmap.
 #' @param cor_type Type of correlation. Must be one of "pearson", "kendall",
 #'   or "spearman"
+#' @param absolute_value Logical indicating whether or not to show absolute value of the correlation values in the correlation heatmap.
 #' @param y_groups Data vector of group ids to use for grouping rows in heatmap.
 #' @param x_groups Data vector of group ids to use for grouping columns in
 #'   heatmap.
@@ -423,7 +424,7 @@ plot_hclust_heatmap <- function(X, y_groups = NULL, x_groups = NULL,
 
 #' @name plot_heatmap
 #' @export
-plot_cor_heatmap <- function(X, cor_type = "pearson",
+plot_cor_heatmap <- function(X, cor_type = "pearson", absolute_value = FALSE,
                            xytext_labels = colnames(X), xytext_colors = NULL,
                            show_ytext = TRUE, show_xtext = TRUE,
                            clust = TRUE, linkage = "ward.D",
@@ -452,6 +453,9 @@ plot_cor_heatmap <- function(X, cor_type = "pearson",
   }
 
   cor_mat <- round(cor_mat, 2)
+  if (absolute_value) {
+    cor_mat <- abs(cor_mat)
+  }
 
   plt <- plot_heatmap(X = cor_mat,
                      ytext_labels = xytext_labels, xtext_labels = xytext_labels,
