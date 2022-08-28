@@ -23,6 +23,7 @@ reference:
       - plot_heatmap
       - plot_pairs
       - plot_pca
+      - plot_horizontal_dotplot
   - subtitle: "Exploratory Data Analysis (EDA) Tables"
     desc: >
       Functions to create common EDA tables.
