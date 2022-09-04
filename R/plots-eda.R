@@ -437,7 +437,7 @@ plot_pairs <- function(data, columns, color = NULL, color_upper = NULL,
 
   # check if show correlations in upper panel
   if (show_upper) {
-    plot_cor <- GGally::wrap("cor", size = cor_text_size)
+    plot_cor <- GGally::wrap("cor", size = cor_text_size, stars = FALSE)
   } else {
     plot_cor <- "blank"
   }
