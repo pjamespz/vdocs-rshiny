@@ -39,7 +39,7 @@ jobs:
           git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
           git checkout gh-pages
           git rm data/*
-          git rm TCGA-BRCA-Example.Rmd
+          git rm PCSDoc-Template.Rmd
           git commit -m "Cleaning up pkgdown site"
           git push
           
